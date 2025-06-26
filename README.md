@@ -56,7 +56,7 @@ This project analyzes Last.fm listening data using PySpark to gain insights into
 
 1.  **Running the PySpark Job:**
 
-    To run the PySpark job, use the provided `run-python-job.ps1` script (for Windows) or run the script directly using `spark-submit` (for other platforms).
+    To run the PySpark job, use the provided `run-python-job.ps1` script (for Windows) or run the script directly using `spark-submit` (for other platforms) after running `docker compose up`.
 
     **On Windows:**
 
@@ -70,6 +70,14 @@ This project analyzes Last.fm listening data using PySpark to gain insights into
 
     - Top artists listened by country users.
     - Top songs listened by country users.
+
+3.  **Multiple worker instances:**
+
+    Use `--scale` parameter:
+
+    ```
+    docker-compose up --scale spark-worker=4
+    ```
 
 ## Data Sources
 
